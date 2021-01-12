@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animacija</title>
+    <style>
+         @keyframes krug1_animacija {
+                0% {
+                    transform: translate(0, 150px) rotate(360deg);
+                    width: 260px;
+                    height: 260px;
+                }
+
+
+                100% {
+                    transform: translate(0, 150px) rotate(0deg);
+                    width: 260px;
+                    height: 260px;
+                }
+            }
+         @keyframes krug2 {
+                0% {
+                    transform: scale(0);
+                }
+         }
+         @keyframes krug3 {
+                0% {
+                    transform: scale(0);
+                }
+         }
+        #background {
+            background-color: #050210;
+            width: 720px;
+            height: 600px;
+            margin: auto;
+            position: relative;
+        }
+        .krug1 {
+            border-radius: 100%;
+            width: 260px;
+            height: 260px;
+            background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+            position: relative;
+            margin: auto;
+            animation: krug1_animacija 0.8s 0s infinite
+        }
+        .blur {
+            width: 260px;
+            height:260px;
+            border-radius: 100%;
+            filter: blur(30px);
+            background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+
+        }
+        .krug2 {
+            width: 230px;
+            height: 230px;
+            border-radius: 100%;
+            background-color: black;
+            position: relative;
+            margin: -95px 245px;
+            
+        }
+        .krug2_animacija {
+            width: 230px;
+            height: 230px;
+            border-radius: 100%;
+            background-color:#1c133fad;
+            filter: grayscale(0.3);
+            animation: krug2 1s 0s infinite;
+        }
+        .krug3_animacija {
+            width: 230px;
+            height: 230px;
+            border-radius: 100%;
+            background-color:#1c133fad;
+            filter: grayscale(0.3);
+            animation: krug3 1s 0.5s infinite;
+            margin: -231px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="background">
+        <div class="krug1">
+            <div class="blur"></div>
+        </div>
+    <div class="krug2">
+        <div class="krug2_animacija"></div>
+        <div class="krug3_animacija"></div>
+    </div>
+        
+    </div>
+    
+</body>
+</html>
